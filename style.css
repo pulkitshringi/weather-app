@@ -24,6 +24,9 @@ h1{
 .weather-input{
     width:550px;
 }
+.weather-input h3{
+    text-align:center;
+}
 .weather-input input{
     padding:0 15px;
     width:100%;
@@ -76,6 +79,9 @@ h1{
     display:flex;
     justify-content: space-between;
 }
+.days-forecast h2{
+    text-align:center;
+}
 .current-weather h2{
     font-size:1.7rem;
 }
@@ -84,12 +90,18 @@ h1{
     font-size:1rem;
     font-weight:500;
 }
+.current-weather .icon{
+    text-align:center;
+}
 .current-weather .icon img{
     max-width:120px;
     margin-top: -15px;
 }
 .current-weather .icon h4{
     margin-top:-10px;
+    text-transform:capitalize;
+}
+.current-weather h2{
     text-transform:capitalize;
 }
 .days-forecast h2{
