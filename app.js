@@ -4,6 +4,7 @@ const cityInput = document.querySelector(".city-input");
 const weatherCards = document.querySelector(".weather-cards");
 const currentWeatherCard = document.querySelector(".current-weather");
 const API_KEY ="e60f5cb54447854537c19bc5c0fa1688";
+const loadingIcon = document.querySelectorAll("i");
 let city;
 const addCurrWeather = (weatherInfo)=>{
     return `<div class="details">
@@ -27,6 +28,7 @@ return `<li class="card">
 </li>` 
 }
 const getCityCoordinates = () =>{
+    loadingIcon[0].setAttribute("class","fa fa-spinner fa-spin");
 const cityName = cityInput.value.trim();
 if(!cityName) return;
 const GEOCODING_API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}`;
@@ -54,6 +56,8 @@ fiveDaysForecastDays.forEach((weatherInfo,index) => {
     else
     weatherCards.insertAdjacentHTML("beforeend",addWeatherDetails(weatherInfo));
 });
+loadingIcon[0].setAttribute("class","");
+loadingIcon[1].setAttribute("class","");
     }
 })
 .catch(()=>{
@@ -62,6 +66,7 @@ fiveDaysForecastDays.forEach((weatherInfo,index) => {
 }
 const getUserCoordinates = () => { 
     cityInput.value="";
+    loadingIcon[1].setAttribute("class","fa fa-spinner fa-spin");
     navigator.geolocation.getCurrentPosition(
         (position) => {
             const { latitude , longitude } = position.coords;
