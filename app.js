@@ -12,6 +12,7 @@ const headcolor = document.querySelectorAll(".bgheadingcolor");
 let city="";
 let flag = 1;
 let flag2=1;
+headcolor[2].style.color="white";
 const addCurrWeather = (weatherInfo)=>{
     if(flag==1){
     return `<div class="details">
