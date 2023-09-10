@@ -71,14 +71,6 @@ h1{
     align-items:center;
     z-index: -999999;
 }
-/* .weather-input .separator::before{
-    content: "or";
-    color: #6C757D;
-    font-size:1.18rem;
-    padding:0 15px;
-    background:#E3F2FD;
-    margin-top:-4px;
-} */
 .current-weather{
     color:#fff;
     background-color:#5372F0c1;
@@ -119,7 +111,6 @@ h1{
 }
 .weather-cards{
     display:flex;
-    /* flex-wrap:wrap; */
     gap:20px;
 }
 .weather-cards .card{
@@ -185,7 +176,6 @@ h1 .fahren:hover {
     color:gold;
 }
 .credits{
-    /* margin:30px 0 10px 0; */
     text-align:center;
 }
 .credits img {
