@@ -138,19 +138,15 @@ const getUserCoordinates = () => {
     )
 };
 const celcselect = ()=>{
-    celc.style.color="goldenrod";
-    celc.style.fontSize = "1.2rem";
+    celc.style.color="gold";
     fahren.style.color="black";
-    fahren.style.fontSize = "1rem";
     flag = 1;
     flag2=1;
     getCityCoordinates();
 };
 const fahrenselect = ()=>{
-    fahren.style.color="goldenrod";
-    fahren.style.fontSize = "1.2rem";
+    fahren.style.color="gold";
     celc.style.color="black";
-    celc.style.fontSize = "1rem";
     flag = 0;
     flag2=1;
     getCityCoordinates();

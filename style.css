@@ -165,6 +165,33 @@ h1 button {
     cursor:pointer;
     color:black;
 }
-h1 button:hover {
-    color:goldenrod;
+h1 .celcius:hover {
+    color:#C59E01 !important;
+}
+h1 .fahren:hover {
+    color:#C59E01 !important;
+}
+.celcius{
+    color:gold;
+}
+.credits{
+    margin:30px 0 30px 0;
+    text-align:center;
+}
+.credits hr{
+    padding:12px 0;
+}
+.credits a {
+    text-decoration:none;
+    color:black;
+    opacity:0.5;
+}
+.credits a:hover {
+    opacity:1;
+}
+h1 img{
+    position:relative;
+    top:4px;
+    height:30px;
+    width:30px;
 }
