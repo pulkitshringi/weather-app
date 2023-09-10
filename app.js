@@ -103,37 +103,53 @@ fiveDaysForecast.forEach((weatherInfo,index) => {
     console.log(weatherInfo.weather[0].id);
 console.log(weatherInfo.weather[0].icon);
     if(index==0){
+        let image = new Image();
         if(weatherInfo.weather[0].main==="Clouds"){
-        body.style.backgroundImage="url(./images/clouds.jpeg)";
-        headcolor[0].style.color="black";
-        headcolor[1].style.color="black";
-        headcolor[2].style.color="white";
+            image.src="./images/clouds.jpeg"
+            image.onload=()=>{
+                body.style.backgroundImage=`url(${image.src})`;
+                headcolor[0].style.color="black";
+                headcolor[1].style.color="black";
+                headcolor[2].style.color="white";
+            }
         }
         else if(weatherInfo.weather[0].main==="Snow"){
-        body.style.backgroundImage="url(./images/snow.jpeg)";
+            image.src="./images/snow.jpeg";
+            image.onload=()=>{
+        body.style.backgroundImage=`url(${image.src})`;
         headcolor[0].style.color="white";
         headcolor[1].style.color="white";
         headcolor[2].style.color="black";
+            };
         }
         else if(weatherInfo.weather[0].main==="Rain"){
-        body.style.backgroundImage="url(./images/rain.jpeg)";
+            image.src="./images/rain.jpeg";
+            image.onload=()=>{
+        body.style.backgroundImage=`url(${image.src})`;
         headcolor[0].style.color="white";
         headcolor[1].style.color="white";
         headcolor[2].style.color="white";
         }
+    }
         else if(weatherInfo.weather[0].main==="Thunderstorm"){
-        body.style.backgroundImage="url(./images/thunderstorm.jpeg)";
+            image.src="./images/thunderstorm.jpeg";
+            image.onload=()=>{
+        body.style.backgroundImage=`url(${image.src})`;
         headcolor[0].style.color="white";
         headcolor[1].style.color="white";
         headcolor[2].style.color="black";
         }
+    }
         else if(weatherInfo.weather[0].main==="clear sky")
         {
-        body.style.backgroundImage="url(./images/sunny.jpeg)";
+            image.src="./images/sunny.jpeg";
+            image.onload=()=>{
+        body.style.backgroundImage=`url(${image.src})`;
         headcolor[0].style.color="white";
         headcolor[1].style.color="black";
         headcolor[2].style.color="white";
         }
+    }
     currentWeatherCard.insertAdjacentHTML("afterbegin",addCurrWeather(weatherInfo));
     }
     weatherCards.insertAdjacentHTML("beforeend",addWeatherDetails(weatherInfo));
