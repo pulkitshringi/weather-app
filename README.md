@@ -1,13 +1,13 @@
 # Alexa Weather Station (Weather-App) ⛈️
-- I have created a weather-app for Alexa Developers SRM Recruitment round which allows users to check the weather for a specific location.
+- I have created a weather-app using OpenWeatherMap API (https://openweathermap.org/api) for Alexa Developers SRM Recruitment round which allows users to check the weather for a specific location.
 ###  My weather App is filled with lot of features such as :-
 - The project has a user-friendly and visually appealing interface.
 - Users can input a city name in the search bar to get weather information for that specific location.
 ### Use Current Location:
 - There's an option to use the user's current location to fetch weather data based on their GPS coordinates.
-### Temperature Units:
+### Celsius (°C) and Fahrenheit (°F) :
 - Users can switch between Celsius (°C) and Fahrenheit (°F) temperature units.
-- ### Font Awesome Icons:
+### Font Awesome Icons:
 - It uses Font Awesome icons for various UI elements.
 ### Background Images:
 - The background image changes dynamically based on the current weather conditions, enhancing the user experience.
