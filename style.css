@@ -188,10 +188,27 @@ h1 .fahren:hover {
 }
 .credits a:hover {
     opacity:1;
+
 }
 h1 img{
     position:relative;
     top:4px;
     height:30px;
     width:30px;
+}
+.current-weather{
+    box-shadow: 4px 3px 6px black;
+    transition:0.2s;
+}
+.current-weather:hover{
+transform:scale(1.02);
+box-shadow: 5px 5px 7px black;
+}
+.card{
+    box-shadow: 3px 3px 3px black;
+    transition:0.2s;
+}
+.card:hover{
+    transform:scale(1.02);
+box-shadow: 5px 5px 5px black;
 }
