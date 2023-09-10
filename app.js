@@ -7,6 +7,8 @@ const API_KEY ="e60f5cb54447854537c19bc5c0fa1688";
 const loadingIcon = document.querySelectorAll("i");
 const celc = document.querySelector(".celcius");
 const fahren = document.querySelector(".fahren");
+const body = document.querySelector("body");
+const headcolor = document.querySelectorAll(".bgheadingcolor");
 let city="";
 let flag = 1;
 let flag2=1;
@@ -99,8 +101,40 @@ currentWeatherCard.innerHTML="";
 fiveDaysForecast.forEach((weatherInfo,index) => {
     console.log(weatherInfo.weather[0].id);
 console.log(weatherInfo.weather[0].icon);
-    if(index==0)
+    if(index==0){
+        if(weatherInfo.weather[0].main==="Clouds"){
+        body.style.backgroundImage="url(./images/clouds.jpeg)";
+        headcolor[0].style.color="black";
+        headcolor[1].style.color="black";
+        headcolor[2].style.color="white";
+        }
+        else if(weatherInfo.weather[0].main==="Snow"){
+        body.style.backgroundImage="url(./images/snow.jpeg)";
+        headcolor[0].style.color="white";
+        headcolor[1].style.color="white";
+        headcolor[2].style.color="black";
+        }
+        else if(weatherInfo.weather[0].main==="Rain"){
+        body.style.backgroundImage="url(./images/rain.jpeg)";
+        headcolor[0].style.color="white";
+        headcolor[1].style.color="white";
+        headcolor[2].style.color="white";
+        }
+        else if(weatherInfo.weather[0].main==="Thunderstorm"){
+        body.style.backgroundImage="url(./images/thunderstorm.jpeg)";
+        headcolor[0].style.color="white";
+        headcolor[1].style.color="white";
+        headcolor[2].style.color="black";
+        }
+        else if(weatherInfo.weather[0].main==="clear sky")
+        {
+        body.style.backgroundImage="url(./images/sunny.jpeg)";
+        headcolor[0].style.color="white";
+        headcolor[1].style.color="black";
+        headcolor[2].style.color="white";
+        }
     currentWeatherCard.insertAdjacentHTML("afterbegin",addCurrWeather(weatherInfo));
+    }
     weatherCards.insertAdjacentHTML("beforeend",addWeatherDetails(weatherInfo));
 });
 loadingIcon[0].setAttribute("class","");
