@@ -157,3 +157,14 @@ h1{
         width:100%;
     }
 }
+h1 button {
+    outline : none;
+    background:none;
+    border:none;
+    font-size:1rem;
+    cursor:pointer;
+    color:black;
+}
+h1 button:hover {
+    color:goldenrod;
+}
