@@ -67,8 +67,10 @@ const getCityCoordinates = () =>{
     if(cityInput.value!=""){
     city=cityInput.value.trim();
     }   
-    if(cityInput.value=="" && city=="")
+    if(cityInput.value=="" && city==""){
+    alert("City name cannot be empty");
         return;
+    }
     loadingIcon[0].setAttribute("class","fa fa-spinner fa-spin");
 const cityName = cityInput.value.trim();
 if(flag2==0){
@@ -166,6 +168,7 @@ loadingIcon[1].setAttribute("class","");
 })
 .catch(()=>{
     alert("Please enter the correct city name.");
+    // cityInput.value="";
     loadingIcon[0].setAttribute("class","");
     loadingIcon[1].setAttribute("class","");
 });
