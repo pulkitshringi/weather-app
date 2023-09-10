@@ -13,6 +13,8 @@ let city="";
 let flag = 1;
 let flag2=1;
 headcolor[2].style.color="white";
+
+
 const addCurrWeather = (weatherInfo)=>{
     if(flag==1){
     return `<div class="details">
@@ -59,6 +61,8 @@ else if(flag==0){
 </li>` 
 }
 }
+
+
 const getCityCoordinates = () =>{
     if(cityInput.value!=""){
     city=cityInput.value.trim();
@@ -73,6 +77,8 @@ loadingIcon[0].setAttribute("class","");
     return;
 }
 }
+
+
 const GEOCODING_API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`;
 fetch(GEOCODING_API_URL)
 .then((res)=> res.json()).then(data=>{
@@ -159,7 +165,9 @@ loadingIcon[1].setAttribute("class","");
     }
 })
 .catch(()=>{
-    alert("An error occurred while fetching the coordinates!");
+    alert("Please enter the correct city name.");
+    loadingIcon[0].setAttribute("class","");
+    loadingIcon[1].setAttribute("class","");
 });
 }
 const getUserCoordinates = () => { 
