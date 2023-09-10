@@ -168,7 +168,7 @@ loadingIcon[1].setAttribute("class","");
 })
 .catch(()=>{
     alert("Please enter the correct city name.");
-    // cityInput.value="";
+    cityInput.value="";
     loadingIcon[0].setAttribute("class","");
     loadingIcon[1].setAttribute("class","");
 });
