@@ -7,6 +7,8 @@
 - There's an option to use the user's current location to fetch weather data based on their GPS coordinates.
 ### Temperature Units:
 - Users can switch between Celsius (°C) and Fahrenheit (°F) temperature units.
+- ### Font Awesome Icons:
+- It uses Font Awesome icons for various UI elements.
 ### Background Images:
 - The background image changes dynamically based on the current weather conditions, enhancing the user experience.
 #### 5-Day Weather Forecast:
@@ -17,5 +19,4 @@
 - Loading spinners are displayed while data is being fetched from the API to provide feedback to the user.
 ### Error Handling:
 - There are error handling mechanisms in place to handle cases where the city name is not valid or there are issues with fetching data from the API.
-### Font Awesome Icons:
-- It uses Font Awesome icons for various UI elements.
+
