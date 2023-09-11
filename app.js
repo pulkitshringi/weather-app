@@ -93,7 +93,6 @@ fetch(GEOCODING_API_URL)
        return alert(`Your City Name : ${city} is not valid.`);
     }
     else{
-        console.log(data);
     const uniqueForecastDays = [];
     const uniqueForecastHours = [];
 const fiveDaysForecast = data.list.filter(forecast => {
@@ -102,19 +101,15 @@ const forecastTime = new Date (forecast.dt_txt).getHours();
 if(uniqueForecastHours[0]===undefined)
     uniqueForecastHours[0] = forecastTime;
 if(!uniqueForecastDays.includes(forecastDate)&& forecastTime==uniqueForecastHours[0]){
-    console.log(forecastTime);
     uniqueForecastHours.push(forecastTime);
 return uniqueForecastDays.push(forecastDate);
 }
 });
-console.log(fiveDaysForecast);
 cityInput.value = "";
 cityInput.setAttribute("placeholder","Enter another city");
 weatherCards.innerHTML="";
 currentWeatherCard.innerHTML="";
 fiveDaysForecast.forEach((weatherInfo,index) => {
-    console.log(weatherInfo.weather[0].id);
-console.log(weatherInfo.weather[0].icon);
     if(index==0){
         let image = new Image();
         if(weatherInfo.weather[0].main==="Clouds"){
