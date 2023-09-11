@@ -9,7 +9,7 @@
 body{
     overflow: auto;
      background: #E3F2FD;
-     background-image: url('./images/plain.jpeg'); 
+     /* background-image: url('./images/plain.jpeg');  */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; 

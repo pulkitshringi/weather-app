@@ -13,6 +13,11 @@ let city="";
 let flag = 1;
 let flag2=1;
 headcolor[2].style.color="white";
+let defaultImage = new Image();
+defaultImage.src="./images/plain.jpeg";
+defaultImage.onload=()=>{
+    body.style.backgroundImage=`url(${defaultImage.src})`;
+}
 
 
 const addCurrWeather = (weatherInfo)=>{
