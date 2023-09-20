@@ -76,11 +76,11 @@ const getCityCoordinates = () =>{
     alert("City name cannot be empty");
         return;
     }
-    loadingIcon[0].setAttribute("class","fa fa-spinner fa-spin");
+    loadingIcon[1].setAttribute("class","fa fa-spinner fa-spin");
 const cityName = cityInput.value.trim();
 if(flag2==0){
 if(!cityName) {alert("Error! CityName cannot be empty.");
-loadingIcon[0].setAttribute("class","");
+loadingIcon[1].setAttribute("class","");
     return;
 }
 }
@@ -162,15 +162,15 @@ fiveDaysForecast.forEach((weatherInfo,index) => {
     }
     weatherCards.insertAdjacentHTML("beforeend",addWeatherDetails(weatherInfo));
 });
-loadingIcon[0].setAttribute("class","");
 loadingIcon[1].setAttribute("class","");
+loadingIcon[2].setAttribute("class","");
     }
 })
 .catch(()=>{
     alert("Please enter the correct city name.");
     cityInput.value="";
-    loadingIcon[0].setAttribute("class","");
     loadingIcon[1].setAttribute("class","");
+    loadingIcon[2].setAttribute("class","");
 });
 }
 const getUserCoordinates = () => { 
